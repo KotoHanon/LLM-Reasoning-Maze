@@ -1,0 +1,401 @@
+map,action_seq
+" 1  0  0  0
+  0  2  0  0
+  0  0  0 -1
+ -1  0  0  0","['down', 'right']"
+" 1  0  0  0
+  2  0 -1  0
+  0  0  0  0
+  0  0  0 -1",['right']
+" 1  0  0  0
+  0  0  0  0
+  0  0 -1 -1
+  0  0  2  0","['down', 'down', 'right', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'right', 'right', 'up']"
+" 1 -1  0  0
+  2  0  0  0
+  0  0  0 -1
+  0  0  0  0",['right']
+" 1  0  0  0
+  0  0  0  0
+  2 -1  0 -1
+  0  0  0  0","['right', 'right']"
+" 1  0  0  2
+  0  0  0  0
+ -1 -1  0  0
+  0  0  0  0","['down', 'left', 'down', 'down']"
+" 1 -1  0  0
+  0 -1  0  0
+  2  0  0  0
+  0  0  0  0","['down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'right', 'right']"
+" 1  0  2  0
+  0  0  0  0
+  0  0  0  0
+ -1 -1  0  0","['left', 'down', 'down']"
+" 1  0  0  0
+ -1  0  0  0
+ -1  0  0  0
+  2  0  0  0","['down', 'down', 'up', 'up', 'down', 'left', 'up', 'down', 'up', 'down', 'down', 'down', 'left', 'left', 'up', 'down', 'up', 'down', 'left', 'left', 'up', 'right', 'down', 'left', 'up', 'up', 'left', 'left', 'down', 'left', 'up', 'left', 'up', 'down', 'up', 'down', 'down', 'left', 'left', 'up', 'left', 'up', 'up', 'up', 'down', 'left', 'left', 'left', 'down', 'down', 'up', 'left', 'down', 'up', 'up', 'down', 'left', 'up', 'left', 'down', 'up', 'up', 'down', 'left', 'down', 'up', 'down', 'down', 'left', 'left', 'up', 'down', 'down', 'down', 'up', 'up', 'left', 'left', 'down', 'left', 'down', 'left', 'up', 'left', 'left', 'up', 'up', 'down', 'up', 'down', 'up', 'left', 'down', 'down', 'left', 'left', 'left', 'down', 'left', 'down', 'left', 'up', 'down', 'up', 'left', 'down', 'up', 'left', 'down', 'up', 'up', 'down', 'left', 'left', 'down', 'down', 'down', 'left', 'up', 'left', 'left', 'up', 'left', 'down', 'down', 'down', 'down', 'up', 'down', 'up', 'down', 'down', 'left', 'left', 'left', 'up', 'left', 'up', 'down', 'up', 'left', 'left', 'up', 'up', 'left', 'left', 'left', 'up', 'up', 'up', 'up', 'down', 'up', 'down', 'up', 'down', 'down', 'down', 'left', 'down', 'up', 'down', 'left', 'right', 'up', 'left', 'up', 'up', 'down', 'down', 'down', 'down', 'down', 'left', 'down', 'left', 'left', 'up', 'down', 'up', 'left', 'up', 'down', 'left', 'left', 'up', 'left', 'down', 'down', 'left', 'down', 'left', 'down', 'up', 'down', 'left', 'up', 'up', 'left', 'left', 'up', 'left', 'down', 'left', 'up', 'up', 'up', 'down', 'up', 'down', 'right', 'right', 'up', 'right']"
+" 1  0  0  0
+  0  0  0  0
+  0  2 -1 -1
+  0  0  0  0","['down', 'right', 'right']"
+" 1  0 -1  0
+  0  0  0  0
+  0  0  0  0
+ -1  2  0  0","['up', 'right', 'right', 'up', 'down', 'up', 'down', 'right']"
+" 1  0  0  0
+  0  0 -1 -1
+  0  0  0  0
+  0  0  2  0","['up', 'left', 'down', 'right', 'right', 'right', 'down']"
+" 1  0  0  0
+  0  0 -1  0
+  0  2  0  0
+  0  0 -1  0","['up', 'left', 'down', 'up', 'right', 'right', 'down']"
+" 1  0  0  0
+  0  0  2 -1
+ -1  0  0  0
+  0  0  0  0","['down', 'down', 'right']"
+" 1  0  0  0
+  0  0  0  0
+  0  0  0  2
+ -1 -1  0  0","['down', 'right', 'down', 'down', 'right']"
+" 1  0  0 -1
+  0 -1  0  2
+  0  0  0  0
+  0  0  0  0","['down', 'down', 'down', 'right']"
+" 1  0  0 -1
+  0 -1  0  0
+  0  0  0  0
+  2  0  0  0","['down', 'down', 'down', 'left', 'left', 'right', 'right', 'up', 'right', 'left', 'right', 'down', 'down', 'right', 'up', 'left', 'right', 'down', 'down', 'left', 'up', 'right', 'left', 'right', 'left', 'left', 'down', 'right', 'right', 'left', 'left', 'right', 'right', 'right', 'up', 'right', 'left', 'up', 'up', 'right']"
+" 1  0  0 -1
+  0  0  0  0
+  0  0  0 -1
+  0  0  2  0","['right', 'down', 'down', 'right', 'right']"
+" 1 -1  2  0
+  0  0  0  0
+  0  0  0  0
+  0  0 -1  0","['down', 'right', 'down', 'left']"
+" 1  0  0  0
+  0  0  0  0
+ -1  0  2 -1
+  0  0  0  0","['down', 'right', 'down', 'right']"
+" 1  2 -1 -1
+  0  0  0  0
+  0  0  0  0
+  0  0  0  0",['down']
+" 1  0  0  0
+  0  0  0  2
+  0  0  0 -1
+  0  0 -1  0","['right', 'down', 'down', 'down']"
+" 1  0  0 -1
+  0  0  2  0
+  0  0  0 -1
+  0  0  0  0","['right', 'down', 'down']"
+" 1  0  0  2
+ -1  0  0  0
+  0  0  0  0
+  0 -1  0  0","['down', 'down', 'down']"
+" 1 -1  0  0
+  0  0  0 -1
+  0  0  0  0
+  2  0  0  0","['right', 'right', 'right']"
+" 1  0  0  0
+  0 -1  0  2
+  0 -1  0  0
+  0  0  0  0","['down', 'down', 'right', 'down']"
+" 1  0 -1  0
+ -1  0  0  0
+  0  0  2  0
+  0  0  0  0","['right', 'right', 'down', 'down']"
+" 1  0  0  0
+  0 -1  0  0
+  2 -1  0  0
+  0  0  0  0","['down', 'right', 'right', 'up']"
+" 1  0  0  0
+  0  0  0  0
+  0  2 -1  0
+  0  0 -1  0","['down', 'right', 'right']"
+" 1  0  2 -1
+  0  0  0  0
+  0  0  0 -1
+  0  0  0  0","['down', 'down']"
+" 1 -1 -1  0
+  0  0  0  0
+  0  0  0  0
+  2  0  0  0","['right', 'up', 'right', 'right']"
+" 1  0  0 -1
+  0  0  0  0
+  0 -1  0  0
+  2  0  0  0","['right', 'down', 'right', 'right', 'up']"
+" 1  0  0 -1
+  2  0  0  0
+  0  0  0 -1
+  0  0  0  0",['right']
+" 1 -1  0  0
+  0  0  0  0
+  0  2  0 -1
+  0  0  0  0","['right', 'right', 'down']"
+" 1  0  0  0
+  0  0  0  0
+  0 -1  0  0
+  0  0  2 -1","['left', 'down', 'up', 'left', 'up', 'up', 'up', 'right', 'left', 'down', 'right', 'down', 'down', 'up', 'down', 'down', 'up', 'up', 'left', 'right', 'left', 'down', 'right', 'left', 'down', 'down', 'right', 'up', 'left', 'left', 'left', 'left', 'right', 'up', 'up', 'up', 'down', 'down', 'left', 'up', 'down', 'down', 'left', 'right', 'up', 'left', 'up', 'right', 'down', 'up', 'up', 'left', 'left', 'up', 'left', 'down', 'right', 'left', 'down', 'right', 'up', 'up', 'down', 'up', 'down', 'down', 'down', 'up', 'down', 'down', 'down', 'down', 'down', 'down', 'left', 'left', 'left', 'up', 'right', 'down', 'up', 'left', 'down', 'right', 'down', 'down', 'up', 'up', 'down', 'down', 'up', 'down', 'up', 'left', 'left', 'up', 'down', 'left', 'down', 'right', 'down', 'left', 'down', 'right', 'down', 'up', 'up', 'up', 'down', 'down', 'down', 'down', 'down', 'up', 'up', 'down', 'left', 'up', 'up', 'down', 'up', 'down', 'right', 'left', 'left', 'up', 'right', 'left', 'right', 'down', 'down', 'down', 'left', 'down', 'down', 'right', 'up', 'down', 'up', 'up', 'up', 'down', 'up', 'left', 'down', 'down', 'right', 'up', 'up', 'right', 'down', 'left', 'left', 'right', 'left', 'up', 'left', 'left', 'left', 'left', 'up', 'left', 'up', 'right', 'up', 'up', 'up', 'up', 'up', 'left', 'up', 'right', 'up', 'left', 'down', 'down', 'up', 'left', 'down', 'left', 'left', 'left', 'up', 'up', 'down', 'down', 'up', 'up', 'right', 'left', 'up', 'up', 'up', 'right', 'down', 'left', 'up', 'up', 'right', 'left', 'right', 'up', 'down', 'up', 'left', 'left', 'right', 'left', 'up', 'down', 'down', 'up', 'up', 'left', 'left', 'down', 'right', 'up', 'up', 'left', 'right', 'down', 'down', 'up', 'left', 'right', 'down', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'down', 'left', 'left', 'left', 'left', 'right', 'down', 'left', 'left', 'down', 'down', 'right', 'left', 'down', 'up', 'up', 'right', 'up', 'down', 'left', 'left', 'down', 'right', 'up', 'up', 'up', 'down', 'left', 'up', 'up', 'right', 'up', 'left', 'right', 'down', 'down', 'down', 'right', 'left', 'up', 'left', 'left', 'left', 'down', 'down', 'up', 'down', 'right', 'down', 'down', 'up', 'down', 'up', 'left', 'left', 'left', 'right', 'left', 'left', 'down', 'up', 'up', 'right', 'down', 'up', 'left', 'up', 'up', 'down', 'left', 'right', 'left', 'right', 'down', 'down', 'down', 'left', 'left', 'left', 'right', 'down', 'down', 'left', 'left', 'down', 'down', 'down', 'up', 'right', 'up', 'left', 'right', 'left', 'down', 'right', 'down', 'left', 'up', 'left', 'left', 'left', 'left', 'left', 'down', 'up', 'down', 'down', 'right', 'left', 'down', 'up', 'right', 'up', 'down', 'left', 'left', 'left', 'right', 'up', 'left', 'right', 'down', 'left', 'up', 'left', 'down', 'left', 'down', 'left', 'down', 'right', 'down', 'up', 'up', 'left', 'right', 'left', 'left', 'up', 'down', 'left', 'right', 'down', 'up', 'down', 'down', 'down', 'down', 'left', 'up', 'up', 'right', 'down', 'down', 'left', 'left', 'up', 'down', 'down', 'right', 'up', 'down', 'up', 'down', 'down', 'up', 'down', 'left', 'up', 'up', 'up', 'down', 'left', 'right', 'left', 'up', 'up', 'down', 'left', 'left', 'down', 'up', 'left', 'down', 'right', 'down', 'right', 'left', 'down', 'left', 'down', 'right', 'up', 'down', 'down', 'left', 'up', 'up', 'right', 'up', 'left', 'down', 'right', 'down', 'down', 'left', 'down', 'right', 'left', 'left', 'right', 'up', 'down', 'up', 'left', 'right', 'down', 'down', 'up', 'left', 'down', 'down', 'down', 'down', 'up', 'left', 'right', 'up', 'left', 'left', 'up', 'left', 'left', 'up', 'left', 'right', 'up', 'down', 'left', 'right', 'down', 'down', 'down', 'down', 'down', 'left', 'down', 'up', 'up', 'right', 'left', 'left', 'left', 'up', 'left', 'down', 'left', 'left', 'down', 'left', 'up', 'left', 'down', 'right', 'left', 'down', 'right', 'down', 'down', 'left', 'right', 'up', 'left', 'up', 'up', 'left', 'down', 'down', 'right', 'up', 'up', 'up', 'down', 'left', 'up', 'right', 'left', 'down', 'right', 'down', 'up', 'up', 'up', 'left', 'down', 'down', 'left', 'left', 'right', 'left', 'up', 'left', 'right', 'left', 'down', 'left', 'up', 'down', 'up', 'up', 'down', 'down', 'down', 'up', 'up', 'down', 'down', 'up', 'right', 'up', 'down', 'left', 'left', 'down', 'up', 'down', 'down', 'left', 'left', 'up', 'up', 'right', 'left', 'left', 'up', 'left', 'left', 'right', 'up', 'down', 'down', 'up', 'left', 'left', 'right', 'down', 'down', 'right', 'left', 'left', 'right', 'left', 'down', 'down', 'left', 'left', 'down', 'up', 'up', 'right', 'down', 'up', 'up', 'left', 'up', 'down', 'right', 'left', 'down', 'up', 'left', 'right', 'up', 'left', 'down', 'right', 'up', 'down', 'left', 'right', 'up', 'up', 'up', 'left', 'right', 'up', 'left', 'right', 'down', 'down', 'left', 'left', 'up', 'right', 'up', 'up', 'down', 'down', 'up', 'down', 'left', 'down', 'down', 'left', 'up', 'down', 'left', 'up', 'down', 'up', 'up', 'left', 'left', 'down', 'left', 'down', 'down', 'down', 'left', 'right', 'left', 'up', 'up', 'up', 'up', 'down', 'down', 'up', 'up', 'down', 'up', 'down', 'down', 'up', 'right', 'up', 'up', 'left', 'right', 'left', 'down', 'left', 'down', 'right', 'down', 'left', 'up', 'up', 'right', 'up', 'left', 'left', 'right', 'down', 'up', 'up', 'up', 'up', 'down', 'up', 'down', 'up', 'up', 'up', 'down', 'up', 'left', 'up', 'right', 'up', 'up', 'left', 'left', 'left', 'down', 'up', 'up', 'left', 'up', 'right', 'down', 'left', 'down', 'up', 'left', 'right', 'left', 'up', 'up', 'up', 'down', 'up', 'down', 'up', 'right', 'left', 'down', 'right', 'up', 'down', 'left', 'right', 'down', 'down', 'down', 'down', 'down', 'down', 'up', 'down', 'left', 'left', 'right', 'left', 'up', 'up', 'left', 'right', 'up', 'left', 'right', 'up', 'down', 'up', 'up', 'left', 'left', 'right', 'left', 'down', 'right', 'down', 'left', 'down', 'up', 'up', 'up', 'down', 'right', 'down', 'down', 'down', 'up', 'up', 'up', 'up', 'down', 'up', 'up', 'left', 'right', 'left', 'left', 'right', 'up', 'down', 'up', 'left', 'right', 'left', 'down', 'down', 'right', 'up', 'down', 'right', 'right']"
+" 1  0  0  0
+  0 -1  0  0
+  0  0  0  2
+  0  0 -1  0","['down', 'down', 'up', 'down', 'up', 'down', 'up', 'left', 'down', 'up', 'up', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'up', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'up', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'right', 'right', 'down']"
+" 1 -1  0  0
+  0  0 -1  0
+  0  0  0  0
+  2  0  0  0","['down', 'down', 'right', 'down', 'right', 'up', 'right', 'up', 'up']"
+" 1  0  0 -1
+  2  0  0  0
+  0  0  0 -1
+  0  0  0  0",['right']
+" 1  0  0  0
+ -1  2  0 -1
+  0  0  0  0
+  0  0  0  0","['down', 'up', 'down', 'right']"
+" 1  0  0  0
+ -1  0  0  0
+  0  0  0  0
+  2  0  0 -1","['down', 'up', 'left', 'down', 'up', 'left', 'down', 'left', 'up', 'up', 'up', 'down', 'up', 'left', 'up', 'up', 'up', 'down', 'up', 'down', 'up', 'up', 'up', 'up', 'down', 'down', 'up', 'down', 'down', 'up', 'right', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'left', 'up', 'up', 'left', 'left', 'left', 'up', 'down', 'down', 'up', 'left', 'left', 'left', 'up', 'down', 'left', 'down', 'up', 'down', 'up', 'left', 'up', 'up', 'down', 'left', 'left', 'down', 'left', 'left', 'up', 'left', 'left', 'down', 'left', 'down', 'down', 'up', 'up', 'down', 'down', 'left', 'up', 'left', 'left', 'down', 'left', 'left', 'left', 'up', 'down', 'down', 'down', 'left', 'left', 'left', 'left', 'down', 'left', 'up', 'left', 'left', 'up', 'left', 'left', 'down', 'left', 'left', 'up', 'up', 'left', 'down', 'up', 'up', 'left', 'down', 'left', 'left', 'down', 'left', 'up', 'left', 'up', 'down', 'up', 'down', 'left', 'left', 'down', 'left', 'left', 'up', 'up', 'left', 'down', 'up', 'up', 'up', 'down', 'up', 'up', 'left', 'up', 'right', 'right', 'right']"
+" 1  0  0  0
+ -1  2  0  0
+  0  0  0 -1
+  0  0  0  0","['right', 'down']"
+" 1  0  0 -1
+  0  0  0  0
+  0  0 -1  0
+  2  0  0  0","['up', 'right', 'up', 'down', 'left', 'right', 'down', 'down', 'up', 'up', 'down', 'down', 'down', 'down', 'up', 'down', 'up', 'up', 'down', 'up', 'up', 'down', 'up', 'down', 'up', 'up', 'up', 'down', 'down', 'up', 'up', 'down', 'up', 'down', 'up', 'left', 'right', 'down', 'down', 'up', 'up', 'down', 'up', 'up', 'down', 'down', 'up', 'down', 'down', 'down', 'down', 'up', 'up', 'down', 'down', 'down', 'up', 'up', 'down', 'up', 'up', 'down', 'down', 'down', 'up', 'up', 'down', 'up', 'up', 'down', 'up', 'right', 'right']"
+" 1 -1  0  0
+  0  0  0  0
+  0  0  0  0
+ -1  2  0  0","['down', 'right', 'right', 'right']"
+" 1 -1  0  2
+  0  0  0  0
+  0  0  0  0
+  0  0 -1  0","['down', 'down', 'down']"
+" 1  0  0  0
+  2  0  0  0
+  0  0 -1 -1
+  0  0  0  0",['right']
+" 1  2  0  0
+  0  0 -1 -1
+  0  0  0  0
+  0  0  0  0",['down']
+" 1  0  0  0
+  2  0  0  0
+  0  0  0 -1
+  0  0 -1  0",['right']
+" 1  0  0  0
+  0  0  0 -1
+  2  0  0  0
+  0 -1  0  0","['right', 'right']"
+" 1  0 -1  0
+  0  0 -1  0
+  0  0  0  0
+  0  2  0  0","['right', 'right', 'right', 'down']"
+" 1  0 -1  0
+  0  0  2  0
+ -1  0  0  0
+  0  0  0  0","['right', 'down', 'down']"
+" 1  0  0  0
+  0  0  0 -1
+  0 -1  2  0
+  0  0  0  0","['up', 'left', 'down', 'up', 'up', 'up', 'up', 'left', 'down', 'down', 'up', 'up', 'left', 'down', 'down', 'down', 'up', 'up', 'left', 'up', 'down', 'left', 'left', 'up', 'down', 'down', 'up', 'left', 'down', 'left', 'left', 'left', 'right', 'right']"
+" 1  0  0  0
+  0  2  0  0
+ -1  0  0  0
+  0  0  0 -1","['down', 'right']"
+" 1  0  0 -1
+  0 -1  0  0
+  2  0  0  0
+  0  0  0  0","['right', 'right']"
+" 1  2  0  0
+  0  0  0  0
+  0  0  0  0
+  0  0 -1 -1",['down']
+" 1  0  0  0
+  0  0 -1  0
+  0 -1  0  0
+  0  0  2  0","['down', 'up', 'down', 'left', 'down', 'left', 'up', 'up', 'down', 'left', 'down', 'left', 'left', 'left', 'up', 'up', 'down', 'down', 'up', 'left', 'up', 'down', 'down', 'left', 'up', 'left', 'down', 'left', 'up', 'up', 'down', 'left', 'down', 'left', 'up', 'left', 'up', 'left', 'down', 'down', 'right', 'right', 'right']"
+" 1  0  2  0
+  0  0  0  0
+  0  0  0  0
+  0 -1  0 -1","['down', 'down']"
+" 1 -1  0  0
+  0  0  0  0
+  0  0  0  0
+  2  0 -1  0","['right', 'right', 'right']"
+" 1  0 -1  2
+  0  0  0  0
+  0  0 -1  0
+  0  0  0  0","['left', 'right', 'down', 'down', 'down', 'left']"
+" 1 -1  0  0
+  0  0  0  0
+  0 -1  0  0
+  2  0  0  0","['right', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'right', 'right', 'up']"
+" 1  0  0  0
+  0  0  2  0
+  0  0  0  0
+ -1  0 -1  0","['right', 'up', 'up', 'down', 'down']"
+" 1  0  0  0
+  0 -1  0  0
+  0  0  2 -1
+  0  0  0  0","['down', 'down', 'up', 'down', 'up', 'down', 'right', 'right']"
+" 1  0  0  0
+  0  0  0  0
+  2  0  0 -1
+  0  0  0 -1","['down', 'up', 'right', 'right']"
+" 1 -1  0  0
+  0  0  0  2
+  0  0  0  0
+  0  0  0 -1","['down', 'right', 'down', 'down']"
+" 1  0  0  0
+  0  0 -1  0
+  0  2  0  0
+  0  0 -1  0","['left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'left', 'right', 'right', 'down']"
+" 1 -1  0  0
+  0  0  0  0
+ -1  0  0  0
+  0  0  2  0","['right', 'down', 'up', 'down', 'up', 'down', 'up', 'right', 'right', 'down', 'down']"
+" 1  2 -1  0
+  0  0  0  0
+  0  0  0  0
+  0  0 -1  0",['down']
+" 1  2  0  0
+ -1  0  0  0
+  0 -1  0  0
+  0  0  0  0",['down']
+" 1  0  2  0
+  0  0  0  0
+  0  0  0  0
+  0 -1 -1  0","['down', 'down']"
+" 1  0  0  2
+  0  0  0 -1
+  0  0  0  0
+  0  0  0 -1","['down', 'down', 'down']"
+" 1  0  0  0
+  0  2  0  0
+  0  0 -1  0
+ -1  0  0  0","['down', 'right']"
+" 1 -1  0  0
+  0  0  0  0
+  0  0  0 -1
+  0  0  0  2","['right', 'down', 'down', 'right', 'right', 'down']"
+" 1  0  2  0
+ -1 -1  0  0
+  0  0  0  0
+  0  0  0  0","['down', 'down']"
+" 1  0  0  0
+  0  0  2  0
+  0  0  0  0
+ -1  0 -1  0","['down', 'right', 'down']"
+" 1  0  0  0
+  0  2  0  0
+ -1  0  0  0
+  0  0 -1  0","['down', 'right']"
+" 1  0  0  0
+  0  0 -1  2
+  0  0  0  0
+  0 -1  0  0","['down', 'down', 'down', 'right']"
+" 1  0  0  2
+  0  0  0  0
+  0  0  0 -1
+  0  0  0 -1","['down', 'down', 'down']"
+" 1  2  0  0
+  0  0 -1  0
+  0  0 -1  0
+  0  0  0  0",['down']
+" 1  0  0  0
+  0  0  0 -1
+  0  0 -1  0
+  0  0  2  0","['down', 'left', 'down', 'down', 'up', 'left', 'left', 'down', 'down', 'down', 'up', 'down', 'up', 'up', 'left', 'down', 'up', 'up', 'down', 'left', 'down', 'down', 'left', 'down', 'up', 'up', 'down', 'up', 'up', 'down', 'down', 'down', 'up', 'up', 'down', 'up', 'up', 'up', 'up', 'right', 'right', 'right', 'down', 'down']"
+" 1  0  0  0
+  0 -1  0 -1
+  0  0  0  0
+  2  0  0  0","['up', 'left', 'left', 'down', 'left', 'left', 'left', 'down', 'left', 'down', 'down', 'up', 'down', 'left', 'down', 'up', 'up', 'down', 'down', 'up', 'down', 'down', 'right', 'up', 'up', 'right', 'right', 'left', 'right', 'up']"
+" 1  0  0  0
+  2  0  0 -1
+  0  0  0  0
+  0  0  0 -1","['up', 'right']"
+" 1  0  0  0
+  0  0  0  0
+  2  0 -1  0
+  0 -1  0  0","['right', 'right']"
+" 1  0  0  2
+  0  0 -1  0
+  0  0 -1  0
+  0  0  0  0","['down', 'down', 'down']"
+" 1  0  0  0
+  0  0  0 -1
+  0  0  0  2
+  0 -1  0  0","['down', 'down', 'left', 'down', 'up', 'left', 'up', 'down', 'up', 'left', 'right', 'right', 'right', 'left', 'left', 'right', 'down', 'down']"
+" 1 -1  0  0
+  0  2  0  0
+  0  0  0  0
+  0  0 -1  0","['right', 'down']"
+" 1  2  0  0
+ -1  0  0  0
+  0  0 -1  0
+  0  0  0  0",['down']
+" 1  0  0  0
+  0 -1  0  0
+  0  0  2 -1
+  0  0  0  0","['down', 'down', 'left', 'down', 'down', 'up', 'up', 'down', 'down', 'left', 'up', 'down', 'down', 'right', 'left', 'up', 'left', 'up', 'down', 'left', 'up', 'up', 'left', 'right', 'left', 'left', 'left', 'left', 'up', 'down', 'up', 'left', 'up', 'up', 'up', 'up', 'down', 'up', 'left', 'left', 'up', 'up', 'left', 'down', 'left', 'left', 'left', 'up', 'left', 'left', 'up', 'up', 'left', 'down', 'up', 'down', 'left', 'up', 'up', 'left', 'up', 'left', 'left', 'left', 'up', 'up', 'up', 'left', 'up', 'left', 'up', 'down', 'right', 'up', 'left', 'down', 'up', 'down', 'left', 'down', 'up', 'up', 'down', 'up', 'down', 'down', 'down', 'down', 'left', 'down', 'down', 'down', 'left', 'left', 'up', 'up', 'up', 'down', 'up', 'left', 'left', 'down', 'left', 'up', 'up', 'up', 'left', 'left', 'left', 'down', 'up', 'down', 'up', 'up', 'down', 'up', 'left', 'left', 'right', 'left', 'up', 'up', 'left', 'up', 'up', 'left', 'down', 'up', 'left', 'left', 'left', 'up', 'up', 'up', 'up', 'up', 'left', 'down', 'up', 'left', 'up', 'up', 'left', 'up', 'up', 'left', 'left', 'up', 'left', 'left', 'down', 'down', 'down', 'left', 'left', 'down', 'up', 'left', 'left', 'left', 'down', 'down', 'left', 'up', 'up', 'down', 'right', 'right']"
+" 1  0  0  0
+ -1 -1  0  0
+  2  0  0  0
+  0  0  0  0","['down', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'up', 'down', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'left', 'left', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'down', 'up', 'up', 'down', 'down', 'right', 'right', 'up', 'up', 'up']"
+" 1  0  0  0
+  2  0  0 -1
+  0  0  0  0
+  0  0  0 -1",['right']
+" 1  0  0  0
+  0  0  0  0
+  0 -1  0  0
+ -1  0  0  2","['down', 'right', 'down', 'down', 'up', 'down', 'right', 'right']"
+" 1  0 -1  0
+ -1  0  0  0
+  0  0  0  0
+  0  0  0  2","['right', 'right', 'right', 'down', 'down', 'down']"
+" 1  0 -1 -1
+  0  0  0  0
+  0  0  0  0
+  0  2  0  0","['right', 'down', 'right', 'right']"
+" 1  0  0  0
+  0  0  0  2
+  0  0  0  0
+  0 -1 -1  0","['down', 'right', 'down', 'down']"
+" 1  0  0  0
+  0  0 -1 -1
+  0  0  0  0
+  0  0  0  2","['left', 'down', 'left', 'left', 'up', 'up', 'up', 'down', 'left', 'up', 'up', 'down', 'up', 'up', 'up', 'down', 'up', 'down', 'down', 'left', 'left', 'left', 'left', 'up', 'up', 'down', 'left', 'up', 'up', 'left', 'left', 'left', 'left', 'down', 'up', 'left', 'down', 'up', 'down', 'left', 'down', 'down', 'left', 'down', 'left', 'up', 'up', 'down', 'left', 'up', 'left', 'up', 'left', 'left', 'up', 'up', 'left', 'up', 'up', 'up', 'down', 'down', 'up', 'up', 'up', 'left', 'up', 'left', 'up', 'left', 'left', 'up', 'down', 'up', 'up', 'left', 'left', 'left', 'down', 'left', 'left', 'up', 'left', 'left', 'left', 'down', 'up', 'left', 'left', 'left', 'left', 'up', 'left', 'down', 'up', 'up', 'left', 'down', 'left', 'left', 'left', 'down', 'up', 'up', 'up', 'down', 'left', 'down', 'down', 'left', 'left', 'left', 'down', 'up', 'left', 'up', 'right', 'right', 'down', 'down', 'right']"
+" 1  0  0  0
+  0  0  0  0
+  0  0  0 -1
+  2 -1  0  0","['right', 'right', 'right']"
+" 1  2  0  0
+  0  0  0  0
+  0 -1  0  0
+ -1  0  0  0","['right', 'left', 'down']"
+" 1  0  0  0
+  0  0 -1  0
+  0 -1  0  0
+  0  0  2  0","['down', 'up', 'left', 'up', 'up', 'down', 'down', 'left', 'down', 'down', 'left', 'left', 'down', 'left', 'left', 'left', 'down', 'left', 'down', 'up', 'left', 'down', 'up', 'left', 'left', 'left', 'down', 'up', 'left', 'down', 'left', 'up', 'up', 'up', 'down', 'left', 'up', 'up', 'left', 'down', 'up', 'up', 'up', 'up', 'left', 'down', 'left', 'down', 'down', 'down', 'left', 'up', 'up', 'down', 'left', 'left', 'up', 'left', 'left', 'up', 'left', 'down', 'left', 'down', 'up', 'down', 'up', 'left', 'up', 'left', 'up', 'down', 'down', 'up', 'down', 'left', 'left', 'left', 'down', 'down', 'up', 'up', 'up', 'down', 'up', 'down', 'down', 'left', 'up', 'up', 'left', 'left', 'down', 'left', 'left', 'up', 'left', 'left', 'down', 'down', 'down', 'down', 'right', 'left', 'down', 'down', 'up', 'up', 'down', 'down', 'down', 'down', 'left', 'up', 'up', 'down', 'up', 'up', 'left', 'up', 'left', 'up', 'up', 'left', 'right', 'right', 'down', 'right', 'down']"
+" 1  0  0  0
+  0  0  0 -1
+  0  0  0 -1
+  0  0  2  0","['down', 'up', 'left', 'up', 'up', 'left', 'left', 'up', 'up', 'left', 'left', 'up', 'down', 'left', 'up', 'left', 'left', 'down', 'up', 'up', 'down', 'left', 'up', 'left', 'down', 'up', 'up', 'down', 'up', 'up', 'up', 'left', 'left', 'up', 'up', 'up', 'down', 'left', 'left', 'left', 'up', 'up', 'left', 'left', 'down', 'left', 'down', 'up', 'left', 'left', 'left', 'down', 'left', 'left', 'up', 'down', 'down', 'up', 'down', 'left', 'up', 'left', 'down', 'down', 'up', 'down', 'left', 'left', 'left', 'up', 'up', 'down', 'down', 'down', 'down', 'left', 'left', 'left', 'down', 'up', 'down', 'down', 'left', 'left', 'down', 'down', 'down', 'left', 'left', 'up', 'up', 'down', 'left', 'up', 'down', 'left', 'left', 'left', 'left', 'left', 'down', 'up', 'up', 'up', 'up', 'left', 'up', 'left', 'left', 'down', 'up', 'left', 'left', 'left', 'left', 'up', 'right', 'left', 'left', 'left', 'down', 'down', 'left', 'down', 'up', 'down', 'up', 'up', 'down', 'down', 'down', 'left', 'up', 'up', 'left', 'down', 'up', 'down', 'up', 'down', 'down', 'up', 'down', 'down', 'up', 'left', 'up', 'down', 'down', 'up', 'up', 'down', 'down', 'down', 'left', 'up', 'up', 'right', 'down', 'right', 'right']"
+" 1  0  0  0
+  0  0  0  0
+  0 -1  2  0
+  0  0  0 -1","['down', 'down', 'right', 'right']"
+" 1  0  0  2
+ -1  0  0  0
+  0  0  0  0
+  0 -1  0  0","['down', 'down', 'down']"
+" 1  0  0  0
+  0  0  0  0
+  0  0  0  0
+ -1  2 -1  0","['down', 'right', 'right', 'right']"
