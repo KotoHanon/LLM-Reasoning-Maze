@@ -15,7 +15,7 @@ MAZE_H = 4  # 设置纵轴的格子数量
 MAZE_W = 4  # 设置横轴的格子数量
 
 # 创建一个迷宫类
-class Maze(tk.Tk, object):
+class VerifierMaze(tk.Tk, object):
     def __init__(self, str):
         super(Maze, self).__init__()
         self.action_space = ['u', 'd', 'l', 'r']
