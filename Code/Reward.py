@@ -1,5 +1,6 @@
 from datasets import Dataset, load_dataset
-import Verifier.VerifierMaze as VerifierMaze
+from Verifier import VerifierMaze
+
 
 SYSTEM_PROMPT = """
 Now you are a player in a maze game where the user provides a 4x4 grid formatted as "xxxx\nxxxx\nxxxx\nxxxx\n", 
@@ -26,10 +27,10 @@ XML_COT_FORMAT = """\
 """
 
 def extract_xml_answer(response):
-    return response.split("<answer>")[-1].split("<answer>").strip()
+    return response.split("<answer>")[-1].split("<answer>")[0].strip()
 
 def get_maze_map():
-    data = load_dataset(path="../env/train_data.csv")
+    data = load_dataset("csv", data_files="../env/train_data.csv", split="train")
     data = data.map(
         lambda x:{
             "prompt": [
