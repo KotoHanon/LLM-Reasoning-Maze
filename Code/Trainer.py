@@ -1,7 +1,7 @@
 from trl import GRPOConfig, GRPOTrainer
 from unsloth import is_bfloat16_supported
 from Unsloth import get_model_and_tokenizer
-from Reward import correct_reward_func, length_reward_func
+from Reward import correct_reward_func, length_reward_func, xml_count_reward_func, strict_format_reward_func, soft_format_reward_func, action_format_reward_func
 from Reward import get_maze_map
 
 training_args = GRPOConfig(
@@ -22,9 +22,10 @@ training_args = GRPOConfig(
     max_prompt_length = 256,
     max_completion_length = 200,
     max_steps = 250,
-    save_steps = 250,
+    save_steps = 50,
     max_grad_norm = 0.1,
     report_to = "wandb",
+    output_dir = "outputs"
 )
 
 model, tokenizer = get_model_and_tokenizer()
@@ -35,7 +36,11 @@ trainer = GRPOTrainer(
     processing_class=tokenizer,
     reward_funcs = [
         correct_reward_func,
-        length_reward_func
+        length_reward_func,
+        xml_count_reward_func,
+        strict_format_reward_func,
+        soft_format_reward_func,
+        action_format_reward_func
     ],
     args = training_args,
     train_dataset = dataset,
