@@ -4,15 +4,14 @@ import re
 
 
 SYSTEM_PROMPT = """
-Now you are a player in a maze game where the user provides a 4x4 grid with the coordinate system starting at the top left corner.
-The agent (1) must navigate using the "U/D/L/R" instruction to reach the goal 
-(" U "means the agent is walking up, minus 1 in the ordinate;" D" means that the agent is walking down, 
-and the ordinate is plus 1;" "L" means that the agent walks to the left, minus 1 on the horizontal coordinate; "
-R" means that the agent walks to the right, plus 1) (2) on the horizontal coordinate without colliding 
-with the obstacle (3), which move downward initially and reverse direction upon hitting grid boundaries. 
-Each agent movement triggers synchronized obstacle shifts within their columns, and you must return the 
-optimal directional sequence to achieve success while avoiding collisions. Your answer should follow the 
-strict format as "UDLR", Respond in the following format:
+你是一个玩家，目前你需要通关一个迷宫游戏。这个迷宫游戏的地图是4*4的方格世界，其中你操控的智能体总是以(0,0)为起点，剩下的15个方格中，有1个方格是终点，
+有2个方格是障碍物。你需要操控智能体进行移动，其中："R"使智能体的纵坐标加1；"L"使智能体的纵坐标减1；
+"U"使智能体的横坐标减1；"D"使智能体的横坐标加1。需要注意的是，每一个障碍物会在它们所在的初始列进行纵向的来回
+移动（每次移动的长度是1），初始移动方向是纵坐标+1，当碰到迷宫的边界会改变移动方向。为了通关游戏，你需要理解和注意：
+1.操控智能体顺利走到终点。
+2.不能碰到纵向来回移动的障碍物，否则游戏直接失败。
+3.障碍物的移动范围是它所在的列。例如有一个初始位置为(2,1)的障碍物，它的移动范围为(0,1)到(3,1)。
+现在，请你将动作序列作为答案，答案的格式严格只能含有RLUD这四个字符，如"RLUD"。让我们一步一步来思考。
 <reasoning>
 ...
 </reasoning>
@@ -56,8 +55,8 @@ def correct_reward_func(prompts, completions, answer, **kwargs) -> list[float]:
     extracted_responses = [extract_xml_answer(response) for response in responses]
     print('-' * 20, f"Map:\n{m}", f"Question:\n{q}", f"\nAnswer:\n{answer[0]}", f"\nResponse:\n{responses[0]}",
           f"\nExtracted:\n{extracted_responses[0]}")
-    print([VerifierMaze(m).verify(extracted_response) for extracted_response in extracted_responses])
-    return [2.0 if VerifierMaze(m).verify(extracted_response) == 1 else 0.0 for extracted_response in extracted_responses]
+    print([VerifierMaze(m).verify(keep_by_replacement(extracted_response, "ULDR")) for extracted_response in extracted_responses])
+    return [2.0 if VerifierMaze(m).verify(keep_by_replacement(extracted_response, "ULDR")) == 1 else 0.0 for extracted_response in extracted_responses]
 
 def length_reward_func(completions, answer, **kwargs) -> list[float]:
     responses = [completion[0]['content'] for completion in completions]
@@ -98,6 +97,13 @@ def count_xml(text) -> float:
 def xml_count_reward_func(completions, **kwargs) -> list[float]:
     responses = [completion[0]['content'] for completion in completions]
     return [count_xml(r) for r in responses]
+
+#筛动作序列
+def keep_by_replacement(s, allowed_chars):
+    for char in s:
+        if char not in allowed_chars:
+            s = s.replace(char, '')
+    return s
 
     
     
