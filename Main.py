@@ -15,14 +15,13 @@ SYSTEM_PROMPT = """
 1.操控智能体顺利走到终点。
 2.不能碰到纵向来回移动的障碍物，否则游戏直接失败。
 3.障碍物的移动范围是它所在的列。例如有一个初始位置为(2,1)的障碍物，它的移动范围为(0,1)到(3,1)。
-现在，请你将动作序列作为答案，答案的格式严格只能含有RLUD这四个字符，如"RLUD"。让我们一步一步来思考。
-注意，你需要把答案放在特定的格式中，即<answer>你的答案</answer>"""
+现在，请你将动作序列作为答案，答案的格式严格只能含有RLUD这四个字符，如"RLUD"。你需要把把答案放在特定的格式中，即<answer>你的答案</answer>"""
 
 
 # 导入模型
 model, tokenizer = get_model_and_tokenizer()
 
-test_data = pd.read_csv("env/processed_train_data.csv")
+test_data = pd.read_csv("env/processed_test_data.csv")
 
 text = [tokenizer.apply_chat_template([
     {'role': "system", 'content': SYSTEM_PROMPT},
@@ -30,9 +29,9 @@ text = [tokenizer.apply_chat_template([
 ],tokenize = False, add_generation_prompt = True) for instruct, map in zip(test_data["instruct"],test_data["map"])]
 
 sampling_params = SamplingParams(
-    temperature = 0.8,
-    top_p = 0.95,
-    max_tokens = 65536
+    temperature = 0.5,
+    top_p = 1.0,
+    max_tokens = 2048
 )
 
 output_before_GRPO = model.fast_generate(
@@ -49,11 +48,10 @@ output_after_GRPO = model.fast_generate(
 
 response_before_GRPO = [keep_by_replacement(extract_xml_answer(output_before_GRPO[i].outputs[0].text),"ULRD") for i in range(len(test_data["map"]))]
 eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_before_GRPO)])
+print(response_before_GRPO)
 print("Before GRPO: ", eval.sum() / len(test_data["map"]))
 
 response_after_GRPO = [keep_by_replacement(extract_xml_answer(output_after_GRPO[i].outputs[0].text),"ULRD") for i in range(len(test_data["map"]))]
 eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_after_GRPO)])
+print(response_after_GRPO)
 print("After GRPO: ", eval.sum() / len(test_data["map"]))
-
-
-
