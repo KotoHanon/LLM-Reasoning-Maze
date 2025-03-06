@@ -4,6 +4,7 @@ from vllm import SamplingParams
 import pandas as pd
 from Code.Unsloth import get_model_and_tokenizer
 from Code.Reward import extract_xml_answer, keep_by_replacement
+import numpy as np
 
 SYSTEM_PROMPT = """
 你是一个玩家，目前你需要通关一个迷宫游戏。这个迷宫游戏的地图是4*4的方格世界，其中你操控的智能体总是以(0,0)为起点，剩下的15个方格中，有1个方格是终点，
@@ -14,13 +15,7 @@ SYSTEM_PROMPT = """
 2.不能碰到纵向来回移动的障碍物，否则游戏直接失败。
 3.障碍物的移动范围是它所在的列。例如有一个初始位置为(2,1)的障碍物，它的移动范围为(0,1)到(3,1)。
 现在，请你将动作序列作为答案，答案的格式严格只能含有RLUD这四个字符，如"RLUD"。让我们一步一步来思考。
-<reasoning>
-...
-</reasoning>
-<answer>
-...
-</answer>
-"""
+注意，你需要把答案放在特定的格式中，即<answer>你的答案</answer>"""
 
 
 # 导入模型
@@ -36,13 +31,15 @@ text = [tokenizer.apply_chat_template([
 sampling_params = SamplingParams(
     temperature = 0.8,
     top_p = 0.95,
-    max_tokens = 4096
+    max_tokens = 65536
 )
 
 output = model.fast_generate(
     text,
     sampling_params = sampling_params,
     lora_request = model.load_lora("Code/outputs/checkpoint-200"),
-)[0].outputs[0].text
+)
 
-print(keep_by_replacement(extract_xml_answer(output),"ULDR"))
+ans = [keep_by_replacement(extract_xml_answer(output[i].outputs[0].text),"ULRD") for i in range(10)]
+eval = np.array([VerifierMaze(m).verify(a) for m, a in zip(test_data["map"], ans)])
+print(eval.sum() / 10)
