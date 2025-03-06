@@ -4,6 +4,7 @@ from vllm import SamplingParams
 import pandas as pd
 from Code.Unsloth import get_model_and_tokenizer
 from Code.Reward import extract_xml_answer, keep_by_replacement
+from Code.Verifier import VerifierMaze
 import numpy as np
 
 SYSTEM_PROMPT = """
