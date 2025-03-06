@@ -22,7 +22,7 @@ SYSTEM_PROMPT = """
 # 导入模型
 model, tokenizer = get_model_and_tokenizer()
 
-test_data = pd.read_csv("env/processed_test_data.csv")
+test_data = pd.read_csv("env/processed_train_data.csv")
 
 text = [tokenizer.apply_chat_template([
     {'role': "system", 'content': SYSTEM_PROMPT},
@@ -47,13 +47,13 @@ output_after_GRPO = model.fast_generate(
     lora_request = model.load_lora("Code/outputs/checkpoint-200"),
 )
 
-response_before_GRPO = [keep_by_replacement(extract_xml_answer(output_before_GRPO[i].outputs[0].text),"ULRD") for i in range(10)]
+response_before_GRPO = [keep_by_replacement(extract_xml_answer(output_before_GRPO[i].outputs[0].text),"ULRD") for i in range(len(test_data["map"]))]
 eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_before_GRPO)])
-print("Before GRPO: ", eval.sum() / 10)
+print("Before GRPO: ", eval.sum() / len(test_data["map"]))
 
-response_after_GRPO = [keep_by_replacement(extract_xml_answer(output_after_GRPO[i].outputs[0].text),"ULRD") for i in range(10)]
+response_after_GRPO = [keep_by_replacement(extract_xml_answer(output_after_GRPO[i].outputs[0].text),"ULRD") for i in range(len(test_data["map"]))]
 eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_after_GRPO)])
-print("After GRPO: ", eval.sum() / 10)
+print("After GRPO: ", eval.sum() / len(test_data["map"]))
 
 
 
