@@ -28,10 +28,10 @@ model, tokenizer = get_model_and_tokenizer()
 
 test_data = pd.read_csv("env/processed_test_data.csv")
 
-text = tokenizer.apply_chat_template([
+text = [tokenizer.apply_chat_template([
     {'role': "system", 'content': SYSTEM_PROMPT},
-    {'role': 'user', 'content': test_data["instruct"][0]+test_data["map"][0]}
-],tokenize = False, add_generation_prompt = True)
+    {'role': 'user', 'content': instruct+map}
+],tokenize = False, add_generation_prompt = True) for instruct, map in zip(test_data["instruct"],test_data["map"])]
 
 sampling_params = SamplingParams(
     temperature = 0.8,
@@ -40,9 +40,9 @@ sampling_params = SamplingParams(
 )
 
 output = model.fast_generate(
-    [text],
+    text,
     sampling_params = sampling_params,
     lora_request = model.load_lora("Code/outputs/checkpoint-200"),
 )[0].outputs[0].text
 
-print(keep_by_replacement(extract_xml_answer(output)))
+print(keep_by_replacement(extract_xml_answer(output),"ULDR"))
