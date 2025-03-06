@@ -35,12 +35,25 @@ sampling_params = SamplingParams(
     max_tokens = 65536
 )
 
-output = model.fast_generate(
+output_before_GRPO = model.fast_generate(
+    text,
+    sampling_params = sampling_params,
+    lora_request = None,
+)
+
+output_after_GRPO = model.fast_generate(
     text,
     sampling_params = sampling_params,
     lora_request = model.load_lora("Code/outputs/checkpoint-200"),
 )
 
-ans = [keep_by_replacement(extract_xml_answer(output[i].outputs[0].text),"ULRD") for i in range(10)]
-eval = np.array([VerifierMaze(m).verify(a) for m, a in zip(test_data["map"], ans)])
-print(eval.sum() / 10)
+response_before_GRPO = [keep_by_replacement(extract_xml_answer(output_before_GRPO[i].outputs[0].text),"ULRD") for i in range(10)]
+eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_before_GRPO)])
+print("Before GRPO: ", eval.sum() / 10)
+
+response_after_GRPO = [keep_by_replacement(extract_xml_answer(output_after_GRPO[i].outputs[0].text),"ULRD") for i in range(10)]
+eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_after_GRPO)])
+print("After GRPO: ", eval.sum() / 10)
+
+
+
