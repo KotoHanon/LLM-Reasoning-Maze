@@ -138,7 +138,7 @@ class VerifierMaze(object):
                     break
 
             if hell_collision:
-                return -1  # 提前终止
+                return 0  # 提前终止
 
         # 最终判断
         if np.array_equal(current_pos, self.oval_pos):
