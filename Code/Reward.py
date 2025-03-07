@@ -11,13 +11,13 @@ SYSTEM_PROMPT = """
 1.操控智能体顺利走到终点。
 2.不能碰到纵向来回移动的障碍物，否则游戏直接失败。
 3.障碍物的移动范围是它所在的列。例如有一个初始位置为(2,1)的障碍物，它的移动范围为(0,1)到(3,1)。
-现在，请你将动作序列作为答案，答案的格式严格只能含有RLUD这四个字符，如"RLUD"。让我们一步一步来思考。
+现在，请你将动作序列作为答案，答案的格式严格只能含有RLUD这四个字符，如"RLUD"。让我们一步一步来思考。请注意，你需要将推理的内容放在
 <reasoning>
 ...
-</reasoning>
+</reasoning>中，而将你的答案放在
 <answer>
 ...
-</answer>
+</answer>中。
 """
 
 XML_COT_FORMAT = """\ 
@@ -60,7 +60,8 @@ def correct_reward_func(prompts, completions, answer, **kwargs) -> list[float]:
 
 def length_reward_func(completions, answer, **kwargs) -> list[float]:
     responses = [completion[0]['content'] for completion in completions]
-    return [0.5 if len(response) <= len(answer[0]) else 0.0 for response in responses]
+    extracted_responses = [extract_xml_answer(response) for response in responses]
+    return [0.5 if len(keep_by_replacement(extracted_response, "ULDR")) <= len(answer[0]) else 0.0 for response in responses]
 
 def strict_format_reward_func(completions, **kwargs) -> list[float]:
     pattern = r"<reasoning>.*?</reasoning>\s*<answer>.*?</answer>"
@@ -78,7 +79,7 @@ def action_format_reward_func(completions, **kwargs) -> list[float]:
     pattern = r'^[A-Z]+$'
     responses = [completion[0]['content'] for completion in completions]
     answer = [extract_xml_answer(r) for r in responses]
-    return [0.5 if re.match(pattern, r) else 0.0 for r in answer]
+    return [0.5 if re.match(pattern, keep_by_replacement(r, "ULDR")) else 0.0 for r in answer]
 
 def count_xml(text) -> float:
     count = 0.0
