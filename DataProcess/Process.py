@@ -11,11 +11,14 @@ def action_process(s):
 data["map"] = data["map"].apply(map_process)
 data["action_seq"] = data["action_seq"].apply(action_process)
 
-data[:-10].to_csv("../env/train_data.csv",index=False)
-data[-10:].to_csv("../env/test_data.csv",index=False)
+data = data[data["action_seq"].str.len() <= 6] # 筛选难度合适的
+data = data[data["map"].str.len() >= 16] # 保证地图不为空
+
+data[:-50].to_csv("../env/train_data.csv",index=False)
+data[-50:].to_csv("../env/test_data.csv",index=False)
 
 # 读取 CSV 文件
-file_path = "../env/train_data.csv"  # 替换为你的文件路径
+file_path = "../env/train_data.csv" 
 df = pd.read_csv(file_path)
 
 # 定义解析地图的函数
@@ -48,19 +51,16 @@ df["instruct"] = df["map"].apply(parse_map)
 
 
 # 保存处理后的 CSV 文件
-output_file_path = "../env/processed_train_data.csv"  # 你可以修改文件名
+output_file_path = "../env/processed_train_data.csv"
 df.to_csv(output_file_path, index=False)
 
 print(f"Processed file saved as: {output_file_path}")
 
-file_path = "../env/test_data.csv"  # 替换为你的文件路径
+file_path = "../env/test_data.csv" 
 df = pd.read_csv(file_path)
 df["instruct"] = df["map"].apply(parse_map)
 
-output_file_path = "../env/processed_test_data.csv"  # 你可以修改文件名
+output_file_path = "../env/processed_test_data.csv"
 df.to_csv(output_file_path, index=False)
 
 print(f"Processed file saved as: {output_file_path}")
-
-
-
