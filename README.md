@@ -18,6 +18,7 @@
 一张L20 + Unsloth的4-bit量化
 
 **5. 结果**
+
 Before GRPO Successful Rate: 0.38
 
 Before GRPO Successful Rate: 0.42
