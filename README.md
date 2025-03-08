@@ -21,6 +21,6 @@
 
 Before GRPO Successful Rate: 0.38
 
-Before GRPO Successful Rate: 0.42
+After GRPO-1000steps Successful Rate: **0.42**
 
 
