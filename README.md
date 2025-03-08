@@ -4,7 +4,18 @@
 
 `git clone https://github.com/KotoHanon/LLM-Reasoning-Maze.git`
 
-**2.运行脚本**
+**2. 依赖库下载**
+
+`pip install -r requirements.txt`
+
+**3. 运行脚本**
 
 `bash Go.sh`
+
+**4. 一些细节**
+
+一张L20 + Unsloth的4-bit量化
+
+**5. 结果**
+
 
