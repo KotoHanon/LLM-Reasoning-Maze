@@ -29,29 +29,29 @@ text = [tokenizer.apply_chat_template([
 ],tokenize = False, add_generation_prompt = True) for instruct, map in zip(test_data["instruct"],test_data["map"])]
 
 sampling_params = SamplingParams(
-    temperature = 0.5,
-    top_p = 1.0,
-    max_tokens = 2048
+    temperature = 0.8,
+    top_p = 0.95,
+    max_tokens = 1024
 )
 
-output_before_GRPO = model.fast_generate(
-    text,
+output_before_GRPO = [model.fast_generate(
+    t,
     sampling_params = sampling_params,
     lora_request = None,
-)
+) for t in text]
 
-output_after_GRPO = model.fast_generate(
-    text,
+output_after_GRPO = [model.fast_generate(
+    t,
     sampling_params = sampling_params,
-    lora_request = model.load_lora("Code/outputs/checkpoint-200"),
-)
+    lora_request = model.load_lora("Code/outputs/checkpoint-1000"),
+) for t in text]
 
-response_before_GRPO = [keep_by_replacement(extract_xml_answer(output_before_GRPO[i].outputs[0].text),"ULRD") for i in range(len(test_data["map"]))]
+response_before_GRPO = [keep_by_replacement(extract_xml_answer(ob[0].outputs[0].text),"ULRD") for ob in output_before_GRPO]
 eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_before_GRPO)])
 print(response_before_GRPO)
 print("Before GRPO: ", eval.sum() / len(test_data["map"]))
 
-response_after_GRPO = [keep_by_replacement(extract_xml_answer(output_after_GRPO[i].outputs[0].text),"ULRD") for i in range(len(test_data["map"]))]
+response_after_GRPO = [keep_by_replacement(extract_xml_answer(oa[0].outputs[0].text),"ULRD") for oa in output_after_GRPO]
 eval = np.array([VerifierMaze(m).verify(r) for m, r in zip(test_data["map"], response_after_GRPO)])
 print(response_after_GRPO)
 print("After GRPO: ", eval.sum() / len(test_data["map"]))
