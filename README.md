@@ -3,7 +3,7 @@
 
 项目的灵感来源：RAGEN https://github.com/ZihanWang314/ragen
 
-全参微调的结果与分析在：https://github.com/KotoHanon/VERL-Maze
+全参微调的结果与分析：https://github.com/KotoHanon/VERL-Maze
 
 **1. 仓库clone**
 
